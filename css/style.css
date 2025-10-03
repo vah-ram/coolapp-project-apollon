@@ -142,7 +142,7 @@
 
 .section--first {
     width: 100%;
-    min-height: 132vh;
+    min-height: 150vh;
     background: url('../img/second-fon-picture.jpg') center center / cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -219,7 +219,7 @@
 .footer--features {
     width: 80%;
     height: auto;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -849,7 +849,13 @@
         min-height: 100vh;
     }
 
+    .footer--features {
+        width: 100%;
+        padding: 0 5px;
+    }
+
     .footer__text-img-cards {
+        width: 100%;
         justify-content: center;
     }
 
@@ -863,11 +869,22 @@
     }
 
     .footer__text-img-card .footer__text-part {
-        width: 100%;
+        width: 90%;
     }
+
+    .footer__text-part .footer__text {
+        width: 100%;
+        min-width: 100%;
+    }
+
+        .footer__text-part .footer__text br{
+            display: none;
+        }
 
     .footer__text-img-card .footer__img-part {
         width: 100%;
+        min-width: unset;
+        min-height: unset;
     }
     
     .section--coolapping {
@@ -907,7 +924,17 @@
     }
 
     .about .about__menu-list {
-        flex-wrap: wrap;
+        width: auto;
+        text-align: center;
+    }
+
+    .about .about__menu-item {
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+
+    .about {
+        width: 95%;
     }
 
     .about .about__subscribe {
@@ -917,17 +944,25 @@
 
 @media (max-width: 767px) {
     
+    main{
+        overflow: hidden;
+    }
+
     .header {
         width: 100%;
-        padding: 0 5px;
+        padding: 0 20px;
     }
 
     .header__first-part .header__logo-part {
         gap: 5px;
     }
 
+    .header__title-text {
+        font-size: 28px;
+    }
+
     .header__web-logos {
-        gap: 15px;
+        gap: 25px;
     }
 
     .header__second-part {
@@ -939,20 +974,33 @@
         font-size: 35px;
     }
 
-        .section--first .section--text {
-            top: 80px;
-        }
+    .section--first .section--text {
+        top: 80px;
+    }
     
     .section__first .section__buttons {
         top: 100px;
     }
 
     .footer--features .footer__title {
-        font-size: 45px;
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .footer__text-img-cards .footer__text-img-card {
+        align-items: center;
+    }
+
+    .footer__text-img-card .footer__text-part {
+        width: 70%;
     }
 
     .footer__text-img-card .footer__text-part {
         padding: 120px 0 0 0;
+    }
+
+    .footer--discover {
+        width: 100%;
     }
 
     .footer--discover .footer__title {
@@ -964,16 +1012,25 @@
     }
 
     .footer__thinks-items {
-        grid-template-columns: repeat( 1, 1fr);
+        width: 100%;
+        text-align: center;
         padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer--materials {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
         .footer--materials .footer__material-item {
-            width: 100%;
+            width: 80%;
             padding-top: 150px;
             padding-left: 20px;
         }
