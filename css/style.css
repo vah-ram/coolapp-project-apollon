@@ -147,12 +147,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    gap: 30px;
+    padding-top: 100px;
 }
 
 .section--first .section--title {
-    position: absolute;
-    top: 80px;
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: 700;
     font-size: 48px;
@@ -166,8 +165,6 @@
 }
 
 .section--first .section--text {
-    position: absolute;
-    top: 150px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -180,8 +177,6 @@
 .section--first .section__buttons {
     display: flex;
     gap: 20px;
-    position: absolute;
-    top: 240px;
 }
 
 .section__buttons .btn {
@@ -967,6 +962,10 @@
 
     .header__second-part {
         padding: 0 20px;
+    }
+
+    .section--first {
+        padding-top: 50px;
     }
 
     .section--first .section--title {
